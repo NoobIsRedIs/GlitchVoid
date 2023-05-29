@@ -1,0 +1,14 @@
+ local Part = Instance.new("Part")
+ local Players = game.Players.LocalPlayer
+Part.Name = "Void"
+Part.Parent = game.Workspace
+Part.Position = Vector3.new(138, 669, 587)
+Part.Anchored = true
+Part.CanCollide = false
+Part.CanQuery = false
+Part.CanTouch = false
+Part.Transparency = 1
+
+if Part then
+    print("Player: " .. Players.Name .. ", Part Found: " .. "Void")
+end
