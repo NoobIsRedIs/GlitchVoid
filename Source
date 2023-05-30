@@ -1,5 +1,5 @@
- local Part = Instance.new("Part")
- local Players = game.Players.LocalPlayer
+local Part = Instance.new("Part")
+local Players = game.Players.LocalPlayer
 Part.Name = "Void"
 Part.Parent = game.Workspace
 Part.Position = Vector3.new(138, 669, 587)
@@ -9,6 +9,16 @@ Part.CanQuery = false
 Part.CanTouch = false
 Part.Transparency = 1
 
+local UIS = game:GetService("UserInputService")
+local CheckPart = game.Workspace:WaitForChild("Void")
+
+UIS.InputBegan:Connect(function(input)
+   if input.KeyCode == Enum.KeyCode.E then
+       print(Players.Name .. " Has Teleport To Void")
+       Players.Character.HumanoidRootPart.CFrame = game.workspace.Void.CFrame
+   end
+end)
+
 if Part then
-    print("Player: " .. Players.Name .. ", Part Found: " .. "Void")
+   print("Player Found: " .. Players.Name .. ", Part Found: Void")
 end
