@@ -13,7 +13,7 @@ local UIS = game:GetService("UserInputService")
 local CheckPart = game.Workspace:WaitForChild("Void")
 
 UIS.InputBegan:Connect(function(input)
-   if input.KeyCode == Enum.KeyCode.Backquote then
+   if input.KeyCode == Enum.KeyCode.E then
        print(Players.Name .. " Has Teleport To Void")
        Players.Character.HumanoidRootPart.CFrame = game.workspace.Void.CFrame
    end
