@@ -14,11 +14,12 @@ local CheckPart = game.Workspace:WaitForChild("Void")
 
 UIS.InputBegan:Connect(function(input)
    if input.KeyCode == Enum.KeyCode.Z then
-       print(Players.Name .. " Has Teleport To Void")
+       print(Players.Name .. " Has Teleport To Void Part")
        Players.Character.HumanoidRootPart.CFrame = game.workspace.Void.CFrame
    end
 end)
 
 if Part then
    print("Player Found: " .. Players.Name .. ", Part Found: Void")
+   print("Press Z To Teleport To Void Part")
 end
